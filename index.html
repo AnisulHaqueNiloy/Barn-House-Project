@@ -234,7 +234,7 @@
           </div>
 
           <!-- right div -->
-          <div>
+          <div class="flex justify-end">
             <img src="./assets/Rectangle.png" alt="" />
           </div>
           <div class="hidden md:flex">
@@ -348,8 +348,59 @@
       <!-- about ends -->
     </main>
 
-    <footer></footer>
+    <footer class="bg-black py-20">
+      <div
+        class="w-11/12 mx-auto flex flex-col items-center justify-center gap-10"
+      >
+        <div class="flex items-center justify-center gap-4">
+          <div>
+            <button class="btn btn-circle bg-[#ABEF09] text-3xl -rotate-45">
+              <i class="bx bx-right-arrow-alt"></i>
+            </button>
+          </div>
 
+          <a href=""
+            ><h1 class="text-4xl font-extrabold text-white">Rinterio</h1></a
+          >
+        </div>
+
+        <p class="text-center text-gray-500">
+          The barn house captivates with its blend of rustic charm and modern
+          sophistication, <br />
+          featuring weathered wood, sleek metal accents.
+        </p>
+
+        <div class="flex-col justify-center items-center text-white">
+          <ul
+            class="md:flex justify-center items-center space-y-7 md:space-x-28"
+          >
+            <li class="text-center"><a href="">Home</a></li>
+            <li class="text-center"><a href="">Services</a></li>
+            <li class="text-center"><a href="">Portfolio</a></li>
+            <li class="text-center"><a href="">Blogs</a></li>
+            <li class="text-center"><a href="">Contact Us</a></li>
+          </ul>
+          <!-- <h1 class="text-center"><a href="">Home</a></h1>
+          <h1 class="text-center"><a href="">Services</a></h1>
+          <h1><a href="">Portfolio</a></h1>
+          <h1><a href="">Blogs</a></h1>
+          <h1><a href="">Contact Us</a></h1> -->
+        </div>
+      </div>
+
+      <div
+        class="w-9/12 md:w-56 mx-auto mt-20 bg-[#ABEF09] rounded-full py-1 px-6 flex items-center justify-center m gap-2"
+      >
+        <h1 class="text-lg font-bold">Book Consult</h1>
+        <div>
+          <button
+            class="w-9 h-9 rounded-full bg-black text-2xl -rotate-45 text-white"
+          >
+            <i class="bx bx-right-arrow-alt"></i>
+          </button>
+        </div>
+      </div>
+    </footer>
     <script>
       function dropdownfun() {
         let dropdown = document.querySelector("#dropdown");
