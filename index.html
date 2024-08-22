@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- box-icon -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- daisy -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+            fontFamily: {
+              manrope: "Manrope",
+            },
+            backgroundImage: {
+              background:
+                "linear-gradient(0.00deg, rgb(	252,	198,	221,0.1),rgba(255, 255, 255, 0.7) 100%)",
+            },
+          },
+        },
+      };
+    </script>
+    <title>Document</title>
+  </head>
+  <body class="font-manrope">
+    <header class="bg-background py-6">
+      <!-- nav starts -->
+      <nav class="w-11/12 mx-auto">
+        <div class="flex items-center">
+          <!-- first div -->
+          <section class="flex gap-1 items-start md:w-1/4">
+            <div>
+              <button class="btn btn-circle bg-[#ABEF09] text-3xl -rotate-45">
+                <i class="bx bx-right-arrow-alt"></i>
+              </button>
+            </div>
+
+            <a href=""><h1 class="text-4xl font-extrabold">Rinterio</h1></a>
+          </section>
+
+          <!-- second div -->
+          <section class="w-2/4">
+            <ul
+              class="hidden md:flex space-x-12 items-center justify-center text-lg font-bold"
+            >
+              <li><a href="">Home</a></li>
+              <li><a href="">Services </a></li>
+              <li><a href="">Blogs</a></li>
+              <li><a href="">Portfolio</a></li>
+              <li><a href="">Contact Us</a></li>
+            </ul>
+          </section>
+
+          <!-- third div -->
+          <section class="hidden md:flex items-center space-x-4">
+            <div>
+              <button class="w-9 h-9 bg-white shadow-md rounded-full text-2xl">
+                <i class="bx bx-search-alt-2"></i>
+              </button>
+            </div>
+
+            <div>
+              <button class="w-9 h-9 bg-white shadow-md rounded-full text-2xl">
+                <i class="bx bx-cart"></i>
+              </button>
+            </div>
+
+            <div
+              class="bg-[#ABEF09] rounded-full py-1 px-6 flex items-center gap-2"
+            >
+              <h1 class="text-lg font-bold">Book Consult</h1>
+              <div>
+                <button
+                  class="w-9 h-9 rounded-full bg-black text-2xl -rotate-45 text-white"
+                >
+                  <i class="bx bx-right-arrow-alt"></i>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <div class="relative md:hidden" id="dropdownbtn">
+            <button
+              class="btn btn-circle bg-white text-2xl shadow-lg"
+              onclick="dropdownfun()"
+            >
+              <i class="bx bx-menu" style="color: #070707"></i>
+            </button>
+
+            <div class="absolute top-14 right-4 hidden" id="dropdown">
+              <ul
+                class="bg-white shadow-md rounded-md p-2 space-y-2 px-4 cursor-pointer"
+              >
+                <li class="hover:bg-gray-300"><a href="#">Home</a></li>
+                <li class="hover:bg-gray-300"><a href="#">Services</a></li>
+                <li class="hover:bg-gray-300"><a href="#">Blogs</a></li>
+                <li class="hover:bg-gray-300"><a href="#">Portfolio</a></li>
+                <li class="hover:bg-gray-300"><a href="#">Contact </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- nav ends -->
+
+      <!-- banner starts -->
+      <section class="w-11/12 mx-auto py-8">
+        <div
+          class="bg-transparent flex flex-col space-y-6 items-center justify-center"
+        >
+          <div><img src="./assets/banner.png" alt="" /></div>
+
+          <h1 class="text-3xl md:text-6xl font-extrabold text-center">
+            A barn house of this design has a <br />
+            striking appearance
+          </h1>
+          <p class="text-center md:w-2/4">
+            The barn house captivates with its blend of rustic charm and modern
+            sophistication, featuring weathered wood, sleek metal accents, and
+            large windows that flood the space with natural light.
+          </p>
+
+          <div
+            class="bg-[#ABEF5F80] inline-flex rounded-full py-1 px-6 flex items-center gap-2"
+          >
+            <h1 class="text-lg font-bold">View Details</h1>
+            <div>
+              <button
+                class="w-9 h-9 rounded-full bg-[#ABEF5F] text-2xl -rotate-45 text-black"
+              >
+                <i class="bx bx-right-arrow-alt"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- banner ends -->
+    </header>
+
+    <main>
+      <!-- about starts -->
+
+      <section class="py-8 bg-gray-200">
+        <div class="w-11/12 mx-auto grid md:grid-cols-2">
+          <!-- left div -->
+          <div class="space-y-6 flex flex-col">
+            <div>
+              <button class="btn w-30 h-4 rounded-full text-sm">
+                <span
+                  ><i
+                    class="bx bx-right-arrow-alt text-lg"
+                    style="color: #060606"
+                  ></i></span
+                >About Us
+              </button>
+            </div>
+
+            <div>
+              <h1 class="text-4xl font-bold mb-5">
+                We design thoughtful, <br />
+                liveable spaces
+              </h1>
+              <p class="w-3/4">
+                The barn house captivates with its blend of rustic charm and
+                <br />
+                modern sophistication, featuring weathered wood, sleek metal
+                accents.
+              </p>
+            </div>
+            <div>
+              <!-- card -->
+              <div></div>
+            </div>
+          </div>
+
+          <!-- right div -->
+          <div></div>
+        </div>
+      </section>
+
+      <!-- about ends -->
+    </main>
+
+    <footer></footer>
+
+    <script>
+      function dropdownfun() {
+        let dropdown = document.querySelector("#dropdown");
+        dropdown.classList.toggle("hidden");
+      }
+    </script>
+  </body>
+</html>
